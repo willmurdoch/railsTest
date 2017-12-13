@@ -14,6 +14,11 @@
       </ul>
     </nav>
     <div id="wrapper">
+      <% flash.each do |name, msg| %>
+        <ul class="errors">
+          <li><%= msg %></li>
+        </ul>
+      <% end %>
       <%= yield %>
     </div>
     <footer>

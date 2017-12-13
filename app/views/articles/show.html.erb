@@ -1,0 +1,13 @@
+<header style="background-image: url(/assets/home.jpg);">
+  <h2><%= @article.title %></h2>
+</header>
+<div class="text">
+  <% if @article.errors.any? %>
+    <ul class="errors">
+    <% @article.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  <% end %>
+  <p><%= @article.description %></p>
+</div>
