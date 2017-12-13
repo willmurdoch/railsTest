@@ -14,12 +14,12 @@
       </ul>
     </nav>
     <div id="wrapper">
+      <%= yield %>
       <% flash.each do |name, msg| %>
         <ul class="errors">
           <li><%= msg %></li>
         </ul>
       <% end %>
-      <%= yield %>
     </div>
     <footer>
       &copy; <%= Time.current.year %> Will Murdoch
