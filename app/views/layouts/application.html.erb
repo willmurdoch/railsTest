@@ -11,15 +11,12 @@
       <a href="<%= root_path %>" class="logo"></a>
       <ul class="links">
         <li><%= link_to 'About', about_path %></li>
+        <li><%= link_to 'Blog', articles_path %></li>
       </ul>
     </nav>
     <div id="wrapper">
       <%= yield %>
-      <% flash.each do |name, msg| %>
-        <ul class="errors">
-          <li><%= msg %></li>
-        </ul>
-      <% end %>
+      <%= render 'layouts/messages' %>
     </div>
     <footer>
       &copy; <%= Time.current.year %> Will Murdoch
