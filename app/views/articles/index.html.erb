@@ -1,9 +1,9 @@
 <header>
   <h2>Articles</h2>
 </header>
-<div class="text">
-  <%= link_to "Create article", new_article_path %>
-  <table>
+<div class="text articles">
+  <%= link_to "Create article", new_article_path, class: "btn new btn-primary btn-sm" %>
+  <table class="table">
     <tr>
       <th>Title</th>
       <th>Description</th>

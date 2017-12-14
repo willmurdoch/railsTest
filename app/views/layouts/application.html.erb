@@ -7,19 +7,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav>
-      <a href="<%= root_path %>" class="logo"></a>
-      <ul class="links">
-        <li><%= link_to 'About', about_path %></li>
-        <li><%= link_to 'Blog', articles_path %></li>
-      </ul>
-    </nav>
-    <div id="wrapper">
+    <%= render 'layouts/navigation' %>
+    <%= render 'layouts/messages' %>
+    <div class="container">
       <%= yield %>
-      <%= render 'layouts/messages' %>
+      <%= render 'layouts/footer' %>
     </div>
-    <footer>
-      &copy; <%= Time.current.year %> Will Murdoch
-    </footer>
   </body>
 </html>
